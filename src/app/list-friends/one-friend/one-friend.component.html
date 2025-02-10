@@ -1,0 +1,22 @@
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 p-4">
+    <div class="flex flex-col items-center">
+        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="https://picsum.photos/200/300" alt="Bonnie image"/>
+        <h3 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{ firstName }} {{ lastName }}</h3>
+        <span class="text-sm text-gray-500 dark:text-gray-400"> Age : {{ age }}</span>
+        <span class="text-sm text-gray-500 dark:text-gray-400"> Status : {{ status }}</span>
+        <div class="w-full text-white py-4">
+            <h4>BIO : </h4>
+            <p class="text-sm text-gray-500 dark:text-gray-400">{{ bio }}</p>
+        </div>
+        <div class="w-full text-white py-2">
+            <h4>Passions : </h4>
+            <p class="text-sm text-gray-500 dark:text-gray-400">{{ interests[0] }}</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">{{ interests[1] }}</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">{{ interests[2] }}</p>
+        </div>
+        <div class="w-full text-white py-2">
+            <h4> Reputation : </h4>
+            <p class="text-sm text-gray-500 dark:text-gray-400">{{ reputation }}</p>
+        </div>
+    </div>
+</div>
