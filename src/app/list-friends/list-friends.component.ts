@@ -8,5 +8,12 @@ import { OneFriendComponent } from './one-friend/one-friend.component';
   styleUrl: './list-friends.component.css'
 })
 export class ListFriendsComponent {
+  text: string = "Aucun Ami...";
+  //isDisabled: boolean = false;
 
+  //constructor() {
+  //  setTimeout(() =>{
+  //    this.isDisabled = true;
+  //  }, 3000);
+  //}
 }
