@@ -9,6 +9,12 @@ import { OneFriendComponent } from './one-friend/one-friend.component';
 })
 export class ListFriendsComponent {
   text: string = "Aucun Ami...";
+  input: string = "";
+
+  onUpdateFriendsList(){
+    
+  }
+
   //isDisabled: boolean = false;
 
   //constructor() {
