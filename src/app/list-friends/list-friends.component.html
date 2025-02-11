@@ -1,4 +1,4 @@
-<div class="w-full flex flex-wrap justify-center items-center py-4">
+<div class="py-4">
     <div class="flex flex-col p-4 justify-center items-center">
         <input type="text" class="bg-blue-100 p-1" [(ngModel)]="input">
         <p class="py-2">{{ input }}</p>
@@ -8,5 +8,7 @@
         </ng-template>
         <input type="submit" value="Add Friends" (click)="changeText()" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
     </div>
-    <app-one-friend class="w-full ps-4"></app-one-friend>
+    <div class="flex justify-center">
+        <app-one-friend *ngFor="let friend of listFriendsTab" class="px-4 w-96"></app-one-friend>
+    </div>
 </div>
