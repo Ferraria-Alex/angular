@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
 import { OneFriendComponent } from './one-friend/one-friend.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-friends',
-  imports: [OneFriendComponent],
+  imports: [OneFriendComponent,FormsModule,CommonModule],
   templateUrl: './list-friends.component.html',
   styleUrl: './list-friends.component.css'
 })
 export class ListFriendsComponent {
-  text: string = "Aucun Ami...";
   input: string = "";
+  isAdded: boolean = false;
 
-  onUpdateInput($event:any){
-    this.input = $event.target.value;
+  changeText(){
+    if(this.input){
+      this.isAdded = true;
+    }
   }
 
-  addFriend(data:string){
-    this.text = `Friend ${data} has been added! Hurray!!!`;
-  }
+  //addFriend(){
+  //  this.text = `Friend ${this.input} has been added! Hurray!!!`;
+  //}
 
   //isDisabled: boolean = false;
 
