@@ -11,8 +11,13 @@ export class ListFriendsComponent {
   text: string = "Aucun Ami...";
   input: string = "";
 
-  onUpdateFriendsList(){
-    
+  onUpdateInput($event:any){
+    this.input = $event.target.value;
+    return this.input;
+  }
+
+  addFriend(data:string){
+    this.text = `Friend ${data} has been added! Hurray!!!`;
   }
 
   //isDisabled: boolean = false;

@@ -1,9 +1,9 @@
 <div class="w-full flex flex-wrap justify-center items-center py-4">
     <div class="flex flex-col p-4 justify-center items-center">
-        <input type="text">
+        <input type="text" class="bg-blue-100 p-1" (keyup)="onUpdateInput($event)">
         <p class="py-2">{{ input }}</p>
         <p class="py-2">{{ text }}</p>
-        <input type="submit" value="Add Friends" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+        <input type="submit" value="Add Friends" (click)="addFriend(input)" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
         <!-- <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" [disabled]="isDisabled">Add Friends</button> -->
     </div>
     <app-one-friend class="w-full ps-4"></app-one-friend>
