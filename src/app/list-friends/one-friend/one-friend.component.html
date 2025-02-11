@@ -1,7 +1,7 @@
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 p-4">
+<div [ngStyle]="{backgroundColor: getColor()}" class="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 p-4">
     <div class="flex flex-col items-center">
         <img class="w-24 h-24 mb-3 rounded-full shadow-lg object-cover" [src]="image" alt="Bonnie image"/>
-        <h3 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{ firstName }} {{ lastName }}</h3>
+        <h3 [ngClass]="{amiOn: status==='Active'?true:false, amiOff: status==='Inactive'?true:false}" class="mb-1 text-xl font-medium">{{ firstName }} {{ lastName }}</h3>
         <span class="text-sm text-gray-500 dark:text-gray-400"> Age : {{ age }}</span>
         <span class="text-sm text-gray-500 dark:text-gray-400"> Status : {{ status }}</span>
         <div class="w-full text-white py-4">
