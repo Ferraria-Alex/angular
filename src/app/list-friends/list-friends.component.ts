@@ -13,7 +13,6 @@ export class ListFriendsComponent {
 
   onUpdateInput($event:any){
     this.input = $event.target.value;
-    return this.input;
   }
 
   addFriend(data:string){
