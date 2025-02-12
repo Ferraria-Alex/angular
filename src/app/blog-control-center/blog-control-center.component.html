@@ -1,0 +1,5 @@
+<div class="flex flex-col justify-center items-center bg-blue-200 w-full">
+    <h2 class="text-5xl text-center my-5">Blog Control Center</h2>
+    <app-add-article (addArticle)="onArticleAdded($event)" (addBroullion)="onBrouillonAdded($event)" class="container mx-5"></app-add-article>
+    <app-article-element *ngFor="let article of articles" [id]="article.id" [title]="article.title" [content]="article.content" [author]="article.author" [date]="article.date" [type]="article.type" class="container mx-5"></app-article-element>
+</div>

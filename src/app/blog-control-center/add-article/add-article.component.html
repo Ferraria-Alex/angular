@@ -1,0 +1,14 @@
+<div class="bg-pink-200 px-5 py-3">
+    <h3 class="text-3xl font-semibold">Add Article</h3>
+    <p class="text-center">Ajouter un Article ou un Broullion</p>
+    <div class="flex flex-col w-full pt-3">
+        <label class="mt-5" for="titleArt">Title Article :</label>
+        <input [(ngModel)]="titleInput" class="mt-1 p-1 bg-gray-50 border border-gray-300 text-gray-900 text-md block w-full" type="text" name="titleArt" id="titleArt">
+        <label class="mt-5" for="contentArt">Content Article :</label>
+        <textarea [(ngModel)]="contentInput" class="mt-1 p-1 bg-gray-50 border border-gray-300 text-gray-900 text-md block w-full focus:text-black h-25" type="text" name="contentArt" id="contentArt"></textarea>
+        <div class="flex mt-5">
+            <button type="button" (click)="createArticle(titleInput,contentInput)" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Ajouter Article</button>
+            <button type="button" (click)="createBroullion(titleInput,contentInput)" class="text-gray-800 hover:text-white border border-gray-800 hover:border-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Ajouter Broullion</button>
+        </div>
+    </div>
+</div>
